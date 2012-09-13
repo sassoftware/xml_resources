@@ -4,7 +4,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="name" type="xs:string" minOccurs="1" msdata:Ordinal="0" />
-        <xs:element name="error_report" minOccurs="0" maxOccurs="1">
+        <xs:element name="error_report" minOccurs="1" maxOccurs="1">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="success" type="xs:string" minOccurs="0" />
@@ -32,10 +32,10 @@
               <xs:element name="details" type="xs:string" minOccurs="1" />
               <xs:element name="message" type="xs:string" minOccurs="1" />
               <xs:element name="success" type="xs:string" minOccurs="1" />
-              <xs:element name="probes" minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="probes" minOccurs="1" maxOccurs="1">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="probe" minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="probe" minOccurs="1" maxOccurs="unbounded">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="details" type="xs:string" minOccurs="1" />
