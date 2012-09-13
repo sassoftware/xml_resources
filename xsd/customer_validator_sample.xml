@@ -1,4 +1,4 @@
-<validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+<validation_report version="2">
     <name>apache_configuration</name>
     <details>Result report details</details>
     <message>Result report message</message>
@@ -18,13 +18,13 @@
         <check>
             <message>Apache not running on port</message>
             <name>Apache Port Check</name>
-            <success>False</success>
+            <success>false</success>
         </check>
         <check>
             <message>Apache debug 5</message>
             <name>Apache Debug Check</name>
-            <success>True</success>
+            <success>true</success>
         </check>
     </checks>
-    <success>False</success> <!--  optional override -->
+    <success>false</success> <!--  optional override -->
 </validation_report>
