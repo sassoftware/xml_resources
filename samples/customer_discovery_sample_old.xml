@@ -1,0 +1,30 @@
+<discovered_properties>
+    <errors>
+        <apache_configuration>
+            <error_list>
+                <error>
+                    <code>500</code>
+                    <detail>Apache not started</detail>
+                    <message>General error: apache not running</message>
+              </error>
+              <error>
+                    <code>1</code>
+                    <detail>Traceback: Text goes here</detail>
+                    <message>Apache claims user does not exist</message>
+              </error>
+            </error_list>
+            <success>True</success>
+        </apache_configuration>
+    </errors>
+    <extensions>
+        <apache_configuration>
+            <name>Apache Configuration Checker</name>
+            <probes>
+                <port>
+                    <name>Apache Port Check</name>
+                    <value>Apache Port check output here</value>
+                </port>
+            </probes>
+        </apache_configuration>
+    </extensions>
+</discovered_properties>

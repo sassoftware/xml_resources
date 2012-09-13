@@ -1,0 +1,42 @@
+<validation_report>
+    <errors>
+        <apache_configuration>
+            <error_list>
+                <error>
+                    <code>500</code>
+                    <detail>Apache not started</detail>
+                    <message>General error: apache not running</message>
+                </error>
+                <error>
+                    <code>1</code>
+                    <detail>Traceback: Text goes here</detail>
+                    <message>Apache claims user does not exist</message>
+                </error>
+            </error_list>
+            <success>False</success>
+        </apache_configuration>
+    </errors>
+    <extensions>
+        <apache_configuration>
+            <details/>
+            <message>Same as in the probes below</message>
+            <name>Apache Configuration Checker</name>
+            <probes>
+                <port>
+                    <details>Apache Port check output here</details>
+                    <message>Apache not running on port</message>
+                    <name>Apache Port Check</name>
+                    <status>fail</status>
+                </port>
+                <port>
+                    <details>Apache Port check output here</details>
+                    <message>Apache not running on port</message>
+                    <name>Apache Port Check</name>
+                    <status>fail</status>
+                </port>
+            </probes>
+            <status>fail</status>
+        </apache_configuration>
+    </extensions>
+    <status>fail</status>
+</validation_report>

@@ -59,6 +59,7 @@
   <xs:complexType name="ConfigCheck">
   	<xs:all>
   		<xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+  		<xs:element name="display_name" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
   		<xs:element name="message" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
   		<xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="1"></xs:element>
   	</xs:all>

@@ -17,12 +17,14 @@
     <checks>
         <check>
             <message>Apache not running on port</message>
-            <name>Apache Port Check</name>
+            <display_name>Apache Port Check</display_name>
+            <name>port_check</name>
             <success>false</success>
         </check>
         <check>
             <message>Apache debug 5</message>
-            <name>Apache Debug Check</name>
+            <display_name>Apache Debug Check</display_name>
+            <name>debug_check</name>
             <success>true</success>
         </check>
     </checks>
