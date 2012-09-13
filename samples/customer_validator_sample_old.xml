@@ -1,3 +1,4 @@
+
 <validation_report>
     <errors>
         <apache_configuration>
@@ -22,18 +23,18 @@
             <message>Same as in the probes below</message>
             <name>Apache Configuration Checker</name>
             <probes>
-                <port>
+                <port_check>
                     <details>Apache Port check output here</details>
                     <message>Apache not running on port</message>
                     <name>Apache Port Check</name>
                     <status>fail</status>
-                </port>
-                <port>
+                </port_check>
+                <debug_check>
                     <details>Apache Port check output here</details>
                     <message>Apache not running on port</message>
                     <name>Apache Port Check</name>
                     <status>fail</status>
-                </port>
+                </debug_check>
             </probes>
             <status>fail</status>
         </apache_configuration>
