@@ -1,35 +1,30 @@
-<validation_report version="2">
+<validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
     <name>apache_configuration</name>
-    <config_error>
-        <errors>
-            <error>
-                <code>500</code>
-                <detail>Apache not started</detail>
-                <message>General error: apache not running</message>
-            </error>
-            <error>
-                <code>1</code>
-                <detail>Traceback: A bunch of tb data</detail>
-                <message>Error when stuff broke, fix it</message>
-            </error>
-        </errors>
-    </config_error>
-    <config_result>
-        <details>Result report details</details>
-        <message>Result report message</message>
-        <probes>
-            <probe>
-                <details>Apache Port check output here</details>
-                <message>Apache not running on port</message>
-                <name>Apache Port Check</name>
-                <success>False</success>
-            </probe>
-            <probe>
-                <details>Apache debug level</details>
-                <message>Apache debug 5</message>
-                <name>Apache Debug Check</name>
-                <success>True</success>
-            </probe>
-        </probes>
-    </config_result>
+    <details>Result report details</details>
+    <message>Result report message</message>
+    <errors>
+        <error>
+            <code>500</code>
+            <detail>Apache not started</detail>
+            <message>General error: apache not running</message>
+        </error>
+        <error>
+            <code>1</code>
+            <detail>Traceback: A bunch of tb data</detail>
+            <message>Error when stuff broke, fix it</message>
+        </error>
+    </errors>
+    <checks>
+        <check>
+            <message>Apache not running on port</message>
+            <name>Apache Port Check</name>
+            <success>False</success>
+        </check>
+        <check>
+            <message>Apache debug 5</message>
+            <name>Apache Debug Check</name>
+            <success>True</success>
+        </check>
+    </checks>
+    <success>False</success> <!--  optional override -->
 </validation_report>

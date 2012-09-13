@@ -1,37 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema id="rPathConfigurator" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
 
-  <!-- rPath Configuration Validator -->
-  <xs:element name="validation_report">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="name" type="xs:Name" minOccurs="1" msdata:Ordinal="0" />
-        <xs:element name="config_error" minOccurs="1" maxOccurs="1" type="ConfigError"/>
-        <xs:element name="config_result" minOccurs="1" maxOccurs="1" type="ConfigResult"/>
-      </xs:sequence>
-      <xs:attribute name="version" type="xs:string" />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="rPathConfigurator" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
-    <xs:complexType>
-      <xs:choice minOccurs="1" maxOccurs="1">
-        <xs:element ref="validation_report" />
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-
-  <!--  Complex types -->
-
-  <xs:complexType name="ConfigError">
-  	<xs:sequence>
-  		<xs:element name="errors" type="ConfigErrors" maxOccurs="unbounded" minOccurs="1">
-  		</xs:element>
-  		<xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="0"></xs:element>
-  	</xs:sequence>
+  <!-- rPath configuration top level elements -->
+  <xs:element name="validation_report" type="ConfigValidationReport"></xs:element>
+  
+  <!-- Validation report complex type -->
+  <xs:complexType name="ConfigValidationReport">
+    <xs:sequence>
+        <xs:element name="name" type="xs:Name" maxOccurs="1"
+            minOccurs="1">
+        </xs:element>
+        <xs:element name="message" type="xs:string" maxOccurs="1"
+            minOccurs="1">
+        </xs:element>
+        <xs:element name="details" type="xs:string" maxOccurs="1"
+            minOccurs="1">
+        </xs:element>
+        <xs:element name="errors" type="ConfigErrors" maxOccurs="1"
+            minOccurs="0">
+        </xs:element>
+        <xs:element name="checks" type="ConfigChecks" maxOccurs="1"
+            minOccurs="1">
+        </xs:element>
+        <xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="0"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="version" type="xs:string"></xs:attribute>
   </xs:complexType>
 
+  <!--  Generic complex types -->
 
-  <xs:complexType name="Error">
+  <xs:complexType name="ConfigError">
   	<xs:sequence>
   		<xs:element name="code" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
   		<xs:element name="detail" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
@@ -41,30 +39,22 @@
 
   <xs:complexType name="ConfigErrors">
   	<xs:sequence>
-  		<xs:element name="error" type="Error" maxOccurs="unbounded" minOccurs="1"></xs:element>
+  		<xs:element name="error" type="ConfigError" maxOccurs="unbounded" minOccurs="1"></xs:element>
   	</xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="ConfigProbe">
+  <xs:complexType name="ConfigCheck">
   	<xs:sequence>
   		<xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
-  		<xs:element name="details" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
   		<xs:element name="message" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
   		<xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="1"></xs:element>
   	</xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="ConfigProbes">
+  <xs:complexType name="ConfigChecks">
   	<xs:sequence>
-  		<xs:element name="probe" type="ConfigProbe" maxOccurs="unbounded" minOccurs="1"></xs:element>
+  		<xs:element name="probe" type="ConfigCheck" maxOccurs="unbounded" minOccurs="1"></xs:element>
   	</xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="ConfigResult">
-  	<xs:sequence>
-  		<xs:element name="details" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
-  		<xs:element name="message" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
-  		<xs:element name="probes" type="ConfigProbes" maxOccurs="1" minOccurs="1"></xs:element>
-  	</xs:sequence>
-  </xs:complexType>
 </xs:schema>
