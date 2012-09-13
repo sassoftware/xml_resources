@@ -2,33 +2,45 @@
 <xs:schema id="rPathConfigurator" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
 
   <!-- rPath configuration top level elements -->
-  <xs:element name="validation_report" type="ConfigReport"></xs:element>
-  <xs:element name="discovery_report" type="ConfigReport"></xs:element>
-  
+  <xs:element name="validation_report" type="ConfigValidationReport"></xs:element>
+  <xs:element name="discovery_report" type="ConfigDiscoveryReport"></xs:element>
+
   <!-- Validation report complex type -->
-  <xs:complexType name="ConfigReport">
-    <xs:all>
-        <xs:element name="name" type="xs:Name" maxOccurs="1"
-            minOccurs="1">
-        </xs:element>
-        <xs:element name="message" type="xs:string" maxOccurs="1"
-            minOccurs="1">
-        </xs:element>
-        <xs:element name="details" type="xs:string" maxOccurs="1"
-            minOccurs="1">
-        </xs:element>
-        <xs:element name="errors" type="ConfigErrors" maxOccurs="1"
-            minOccurs="0">
-        </xs:element>
-        <xs:element name="checks" type="ConfigChecks" maxOccurs="1"
-            minOccurs="1">
-        </xs:element>
-        <xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="0"></xs:element>
-    </xs:all>
-    <xs:attribute name="version" type="xs:string"></xs:attribute>
+  <xs:complexType name="ConfigValidationReport">
+    <xs:complexContent>
+      <xs:extension base="ConfigReport">
+        <xs:sequence>
+          <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
+          <xs:element name="checks" type="ConfigChecks" maxOccurs="1" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:extension>
+    </xs:complexContent>    
   </xs:complexType>
 
+  <!-- Discovery report complex type -->
+  <xs:complexType name="ConfigDiscoveryReport">
+    <xs:complexContent>
+      <xs:extension base="ConfigReport">
+        <xs:sequence>
+          <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
+          <xs:element name="results" type="ConfigResults" maxOccurs="1" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:extension>
+    </xs:complexContent>    
+  </xs:complexType>
+  
+
   <!--  Generic complex types -->
+  
+  <xs:complexType name="ConfigReport">
+    <xs:sequence>
+        <xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
+        <xs:element name="message" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+        <xs:element name="details" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+        <xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="0"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="version" type="xs:string"></xs:attribute>
+  </xs:complexType>
 
   <xs:complexType name="ConfigError">
   	<xs:all>
@@ -40,7 +52,7 @@
 
   <xs:complexType name="ConfigErrors">
   	<xs:sequence>
-  		<xs:element name="error" type="ConfigError" maxOccurs="1" minOccurs="0"></xs:element>
+  		<xs:element name="error" type="ConfigError" maxOccurs="unbounded" minOccurs="0"></xs:element>
   	</xs:sequence>
   </xs:complexType>
 
@@ -54,7 +66,20 @@
 
   <xs:complexType name="ConfigChecks">
   	<xs:sequence>
-  		<xs:element name="check" type="ConfigCheck" maxOccurs="1" minOccurs="0"></xs:element>
+  		<xs:element name="check" type="ConfigCheck" maxOccurs="unbounded" minOccurs="0"></xs:element>
+  	</xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConfigResult">
+  	<xs:sequence>
+  		<xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+  		<xs:element name="value" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+  	</xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConfigResults">
+  	<xs:sequence>
+  		<xs:element name="result" type="ConfigResult" maxOccurs="unbounded" minOccurs="1"></xs:element>
   	</xs:sequence>
   </xs:complexType>
 </xs:schema>
