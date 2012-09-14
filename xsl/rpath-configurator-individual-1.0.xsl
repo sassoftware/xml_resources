@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  This XSL is used to transform merged configuration output where each block is
-  in customer style format.
-  
-  For example:
-  
-  <validate>
-    <validation_report/>
-  </validate>
-  
-  <discover>
-    <discover_report/>
-  </discover>
-  
-  <read>
-    <read_report/>
-  </read>
+
+  This XSL is not intended for use on its own.  It was  first draft of individual
+  nodes and should not be used anymore.
+ 
+  This XSL is used to transform custom style configurator XML into API style
+  XML.  It operates on the output of a single script at a time.  For example,
+  if the customer has 3 validatation scripts, this runs against the output
+  of each of them.
  -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:output method="xml" version="1.0" indent="yes" cdata-section-elements ="value"/> 
-    
-  <xsl:template match="/validation_reports/validation_report">
-    <xsl:variable name="validation_name" select="/validation_reports/validation_report/name"/>
+  
+  <xsl:template match="/validation_report">
+    <xsl:variable name="validation_name" select="/validation_report/name"/>
     <xsl:element name="validation_report">
     
       <!-- Process errors if they exist -->
@@ -47,47 +39,47 @@
            </xsl:element>
         </xsl:element>
       </xsl:if>
-      
-      <!-- Process checks if they exist -->
+	    
+	    <!-- Process checks if they exist -->
       <xsl:if test="checks">
         <xsl:apply-templates select="checks"/>
       </xsl:if>
-      
-    <!-- Process success if it exist -->
+	    
+	  <!-- Process success if it exist -->
     <xsl:if test="success">
       <xsl:element name="status">
         <xsl:value-of select="success"/>
       </xsl:element>
     </xsl:if>
-      
+	    
     </xsl:element>
   </xsl:template>
   
-  <xsl:template match="/discovery_reports/discovery_report">
+  <xsl:template match="/discovery_report">
     
-    <xsl:variable name="discovery_name" select="/discovery_reports/discovery_report/name"/>
+    <xsl:variable name="discovery_name" select="/discovery_report/name"/>
     <xsl:element name="discovery_report">
     
       <!-- Process errors if they exist -->
       <xsl:if test="errors">
         <xsl:element name="errors">
-          <xsl:element name="{$discovery_name}">
-            <xsl:element name="error_list">
-              <xsl:for-each select="errors/error">
-                 <xsl:element name="error">
-                   <xsl:element name="code">
-                     <xsl:value-of select="code"/>
-                   </xsl:element>
-                   <xsl:element name="detail">
-                     <xsl:value-of select="details"/>
-                   </xsl:element>
-                   <xsl:element name="message">
-                     <xsl:value-of select="summary"/>
-                   </xsl:element>
-                 </xsl:element>
-              </xsl:for-each>
-              </xsl:element>
-           </xsl:element>
+		      <xsl:element name="{$discovery_name}">
+		        <xsl:element name="error_list">
+		          <xsl:for-each select="errors/error">
+		             <xsl:element name="error">
+		               <xsl:element name="code">
+		                 <xsl:value-of select="code"/>
+		               </xsl:element>
+		               <xsl:element name="detail">
+		                 <xsl:value-of select="details"/>
+		               </xsl:element>
+		               <xsl:element name="message">
+		                 <xsl:value-of select="summary"/>
+		               </xsl:element>
+		             </xsl:element>
+		          </xsl:for-each>
+		          </xsl:element>
+		       </xsl:element>
         </xsl:element>
       </xsl:if>
       
@@ -108,11 +100,11 @@
   
   <!-- Results template -->
   <xsl:template match="results">
-    <xsl:variable name="discovery_name" select="/discovery_reports/discovery_report/name"/>
+    <xsl:variable name="discovery_name" select="/discovery_report/name"/>
     <xsl:element name="extensions">
       <xsl:element name="{$discovery_name}">
         <xsl:element name="name">
-          <xsl:value-of select="/discovery_reports/discovery_report/display_name"/>
+          <xsl:value-of select="/discovery_report/display_name"/>
         </xsl:element>
         <xsl:element name="probes">
           <xsl:for-each select="result">
@@ -133,36 +125,35 @@
   
   <!-- Checks template -->
   <xsl:template match="checks">
-    <xsl:variable name="validator_name" select="/validation_reports/validation_report/name"/>
+    <xsl:variable name="validator_name" select="/validation_report/name"/>
     <xsl:element name="extensions">
        <xsl:element name="{$validator_name}">
          <xsl:element name="name">
-           <xsl:value-of select="/validation_reports/validation_report/display_name"/>
+           <xsl:value-of select="/validation_report/display_name"/>
          </xsl:element>
          <xsl:element name="details">
-           <xsl:value-of select="/validation_reports/validation_report/details"/>
+           <xsl:value-of select="/validation_report/details"/>
          </xsl:element>
          <xsl:element name="message">
-           <xsl:value-of select="/validation_reports/validation_report/summary"/>
+           <xsl:value-of select="/validation_report/summary"/>
          </xsl:element>
          <xsl:element name="probes">
-           <xsl:for-each select="check">
-             <xsl:variable name="check_name" select="name" />
-             <xsl:element name="{$check_name}">
-               <xsl:element name="message">
-                 <xsl:value-of select="summary"/>
-               </xsl:element>
-               <xsl:element name="name">
-                 <xsl:value-of select="display_name"/>
-               </xsl:element>
-               <xsl:element name="status">
-                 <xsl:value-of select="success"/>
-               </xsl:element>
-             </xsl:element>
-           </xsl:for-each>
-         </xsl:element>
-       </xsl:element>
-     </xsl:element>
+			     <xsl:for-each select="check">
+			       <xsl:variable name="check_name" select="name" />
+			       <xsl:element name="{$check_name}">
+			         <xsl:element name="message">
+			           <xsl:value-of select="summary"/>
+			         </xsl:element>
+			         <xsl:element name="name">
+			           <xsl:value-of select="display_name"/>
+			         </xsl:element>
+			         <xsl:element name="status">
+			           <xsl:value-of select="success"/>
+			         </xsl:element>
+			       </xsl:element>
+			     </xsl:for-each>
+		     </xsl:element>
+		   </xsl:element>
+		 </xsl:element>
   </xsl:template>
-    
 </xsl:stylesheet>
