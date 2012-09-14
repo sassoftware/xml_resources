@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="rPathConfigurator" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+<xs:schema id="rPathConfigurator" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <!-- rPath configuration top level elements -->
   <xs:element name="validation_report" type="ConfigValidationReport"></xs:element>
