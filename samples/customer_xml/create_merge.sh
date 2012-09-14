@@ -14,12 +14,12 @@ function merge_files
   done
 }
 
-echo "<validate>" > $validateFile
-echo "<discover>" > $discoverFile
+echo "<validation_reports>" > $validateFile
+echo "<discovery_reports>" > $discoverFile
 
 merge_files $validateFile ./validate*.xml
 merge_files $discoverFile ./discover*.xml
 
-echo "</validate>" >> $validateFile
-echo "</discover>" >> $discoverFile
+echo "</validation_reports>" >> $validateFile
+echo "</discovery_reports>" >> $discoverFile
 

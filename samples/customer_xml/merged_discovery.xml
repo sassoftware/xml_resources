@@ -1,4 +1,4 @@
-<discover>
+<discovery_reports>
 <discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
     <name>apache_configuration</name>
     <display_name>Apache Configuration Checker</display_name>
@@ -50,4 +50,4 @@
         </error>
     </errors>
 </discovery_report>
-</discover>
+</discovery_reports>

@@ -1,4 +1,4 @@
-<validate>
+<validation_reports>
 <validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
     <name>apache_configuration</name>
     <display_name>Apache Configuration Validator</display_name>
@@ -62,4 +62,4 @@
         </error>
     </errors>
 </validation_report>
-</validate>
+</validation_reports>
