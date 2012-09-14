@@ -1,32 +1,35 @@
 <validation_report version="2">
     <name>apache_configuration</name>
-    <details>Result report details</details>
-    <message>Result report message</message>
+    <display_name>Apache Configuration Validator</display_name>
+    <success>false</success>
+    <summary>Apache Configuration Validator report summary</summary>
+    <details>Apache Configuration Validator report details</details>
     <errors>
         <error>
             <code>500</code>
-            <detail>Apache not started</detail>
-            <message>General error: apache not running</message>
+            <details>Apache not started</details>
+            <summary>General error: apache not running</summary>
         </error>
         <error>
             <code>1</code>
-            <detail>Traceback: A bunch of tb data</detail>
-            <message>Error when stuff broke, fix it</message>
+            <details>Traceback: A bunch of tb data</details>
+            <summary>Error when stuff broke, fix it</summary>
         </error>
     </errors>
     <checks>
         <check>
-            <message>Apache not running on port</message>
+            <summary>Apache not running on port</summary>
             <display_name>Apache Port Check</display_name>
+            <details>Apache Port check output here</details>
             <name>port_check</name>
             <success>false</success>
         </check>
         <check>
-            <message>Apache debug 5</message>
+            <summary>Apache debug 5</summary>
             <display_name>Apache Debug Check</display_name>
+            <details>Apache Debug check output here</details>
             <name>debug_check</name>
             <success>true</success>
         </check>
     </checks>
-    <success>false</success> <!--  optional override -->
 </validation_report>
