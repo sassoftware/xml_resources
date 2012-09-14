@@ -1,0 +1,52 @@
+ <validation_report>
+    <errors>
+      <postgresql_validate>
+        <error_list>
+          <error>
+            <code>128</code>
+            <detail/>
+            <message>Unable to read postgresql cfg listen addresses</message>
+          </error>
+          <error>
+            <code>9999</code>
+            <detail>--None</detail>
+            <message>postgresql validation failed</message>
+          </error>
+          <error>
+            <code>128</code>
+            <detail/>
+            <message>Unable to read postgresql cfg listen addresses</message>
+          </error>
+        </error_list>
+        <success>False</success>
+      </postgresql_validate>
+    </errors>
+    <extensions>
+      <postgresql_validate>
+        <message>Validating postgresql configuration</message>
+        <probes>
+          <listen_addresses>
+            <status>Fail</status>
+            <message>port checker</message>
+            <name>PostgreSQL Listen Addresses</name>
+            <details/>
+          </listen_addresses>
+          <port>
+            <status>Fail</status>
+            <message>port checker</message>
+            <name>PostgreSQL Port Check</name>
+            <details/>
+          </port>
+          <port_cfg>
+            <status>Pass</status>
+            <message>port config checker</message>
+            <name>PostgreSQL CFG Port</name>
+            <details/>
+          </port_cfg>
+        </probes>
+        <name>postgresql_validate</name>
+        <details/>
+      </postgresql_validate>
+    </extensions>
+    <status>fail</status>
+  </validation_report>
