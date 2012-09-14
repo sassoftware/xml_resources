@@ -1,5 +1,5 @@
 <validation_report version="2">
-    <name>apache_configuration</name>
+    <THISWONTVALIDATE>apache_configuration</THISWONTVALIDATE>
     <display_name>Apache Configuration Validator</display_name>
     <success>false</success>
     <summary>Apache Configuration Validator report summary</summary>
