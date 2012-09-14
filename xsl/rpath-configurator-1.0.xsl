@@ -5,11 +5,30 @@
   
   <xsl:template match="/validation_report">
     
+    <xsl:variable name="validation_name" select="/validation_report/name"/>
     <xsl:element name="validation_report">
     
       <!-- Process errors if they exist -->
-      <xsl:if test="errors"> 
-        <xsl:apply-templates select="errors"/>
+      <xsl:if test="errors">
+        <xsl:element name="errors">
+          <xsl:element name="{$validation_name}">
+            <xsl:element name="error_list">
+              <xsl:for-each select="errors/error">
+                 <xsl:element name="error">
+                   <xsl:element name="code">
+                     <xsl:value-of select="code"/>
+                   </xsl:element>
+                   <xsl:element name="detail">
+                     <xsl:value-of select="details"/>
+                   </xsl:element>
+                   <xsl:element name="message">
+                     <xsl:value-of select="summary"/>
+                   </xsl:element>
+                 </xsl:element>
+              </xsl:for-each>
+              </xsl:element>
+           </xsl:element>
+        </xsl:element>
       </xsl:if>
 	    
 	    <!-- Process checks if they exist -->
@@ -29,16 +48,29 @@
   
   <xsl:template match="/discovery_report">
     
+    <xsl:variable name="discovery_name" select="/discovery_report/name"/>
     <xsl:element name="discovery_report">
     
       <!-- Process errors if they exist -->
-      <xsl:if test="errors"> 
+      <xsl:if test="errors">
         <xsl:element name="errors">
-          <xsl:element name="name">
-            <xsl:element name="error_list">
-              <xsl:apply-templates select="errors"/>
-            </xsl:element>
-          </xsl:element>
+		      <xsl:element name="{$discovery_name}">
+		        <xsl:element name="error_list">
+		          <xsl:for-each select="errors/error">
+		             <xsl:element name="error">
+		               <xsl:element name="code">
+		                 <xsl:value-of select="code"/>
+		               </xsl:element>
+		               <xsl:element name="detail">
+		                 <xsl:value-of select="details"/>
+		               </xsl:element>
+		               <xsl:element name="message">
+		                 <xsl:value-of select="summary"/>
+		               </xsl:element>
+		             </xsl:element>
+		          </xsl:for-each>
+		          </xsl:element>
+		       </xsl:element>
         </xsl:element>
       </xsl:if>
       
@@ -114,29 +146,5 @@
 		     </xsl:element>
 		   </xsl:element>
 		 </xsl:element>
-  </xsl:template>
-  
-  <!-- Generic error template -->
-  <xsl:template match="errors">
-    <xsl:variable name="config_name" select="/*/name"/>
-    <xsl:element name="errors">
-      <xsl:element name="${config_name}">
-        <xsl:element name="error_list">
-			    <xsl:for-each select="error">
-			       <xsl:element name="error">
-			         <xsl:element name="code">
-			           <xsl:value-of select="code"/>
-			         </xsl:element>
-			         <xsl:element name="detail">
-			           <xsl:value-of select="details"/>
-			         </xsl:element>
-			         <xsl:element name="message">
-			           <xsl:value-of select="summary"/>
-			         </xsl:element>
-			       </xsl:element>
-			    </xsl:for-each>
-			    </xsl:element>
-       </xsl:element>
-     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

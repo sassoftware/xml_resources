@@ -65,22 +65,16 @@
   </xs:complexType>
 
   <xs:complexType name="ConfigResult">
-  	<xs:sequence>
+  	<xs:all>
   		<xs:element name="display_name" type="xs:string"></xs:element>
-  		<xs:element name="name" type="xs:Name" maxOccurs="1"
-  			minOccurs="1">
-  		</xs:element>
-  		<xs:element name="value" type="xs:string" maxOccurs="1"
-  			minOccurs="1">
-  		</xs:element>
-  	</xs:sequence>
+  		<xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
+  		<xs:element name="value" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+  	</xs:all>
   </xs:complexType>
 
   <xs:complexType name="ConfigResults">
   	<xs:sequence>
-            <xs:element name="result" type="ConfigResult"
-  			maxOccurs="unbounded" minOccurs="1">
-  		</xs:element>
+      <xs:element name="result" type="ConfigResult" maxOccurs="unbounded" minOccurs="1"></xs:element>
   	</xs:sequence>
   </xs:complexType>
 </xs:schema>
