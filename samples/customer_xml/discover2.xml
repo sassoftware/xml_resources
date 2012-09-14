@@ -1,0 +1,12 @@
+<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>cim_configuration</name>
+    <message>Result report message</message>
+    <details>Result report details</details>
+    <success>true</success>
+    <results>
+        <result>
+            <name>CIM Config File</name>
+            <value>Pretend these are the contents of the cim config file</value>
+        </result>
+    </results>
+</discovery_report>
