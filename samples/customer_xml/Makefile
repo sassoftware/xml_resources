@@ -16,3 +16,6 @@ XML_FILES = $(wildcard *.xml)
 
 validate:
 	xmllint -schema ../../xsd/rpath-configurator-1.0.xsd $(XML_FILES) > /dev/null
+
+merge:
+	./create_merge.sh

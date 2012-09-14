@@ -1,0 +1,53 @@
+<discover>
+<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>apache_configuration</name>
+    <display_name>Apache Configuration Checker</display_name>
+    <success>true</success>
+    <errors>
+        <error>
+            <code>500</code>
+            <details>Failed to locate file</details>
+            <summary>General error: file not found</summary>
+        </error>
+        <error>
+            <code>1</code>
+            <details>Traceback: A bunch of tb data</details>
+            <summary>Error when stuff broke, fix it</summary>
+        </error>
+    </errors>
+    <results>
+        <result>
+            <display_name>Apache Config File</display_name>
+            <name>apache_config</name>
+            <value>Pretend these are the contents of the apache config file</value>
+        </result>
+        <result>
+            <display_name>My XML Blob</display_name>
+            <name>my_xml_blob</name>
+            <value><![CDATA[<pretend><something/><is/><here/></pretend>]]></value>
+        </result>
+    </results>
+</discovery_report>
+<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>cim_configuration</name>
+    <display_name>CIM Configuration Checker</display_name>
+    <results>
+        <result>
+            <display_name>CIM Config File</display_name>
+            <name>cim_config_file</name>
+            <value>Pretend these are the contents of the cim config file</value>
+        </result>
+    </results>
+</discovery_report>
+<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>tomcat_configuration</name>
+    <display_name>Tomcat Configuration Checker</display_name>
+    <errors>
+        <error>
+            <code>500</code>
+            <details>Failed to locate file</details>
+            <summary>General error: file not found</summary>
+        </error>
+    </errors>
+</discovery_report>
+</discover>
