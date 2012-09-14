@@ -17,11 +17,13 @@
     </errors>
     <results>
         <result>
-            <name>Apache Config File</name>
+            <display_name>Apache Config File</display_name>
+            <name>apache_config</name>
             <value>Pretend these are the contents of the apache config file</value>
         </result>
         <result>
-            <name>My XML Blob</name>
+            <display_name>My XML Blob</display_name>
+            <name>my_xml_blob</name>
             <value><![CDATA[<pretend><something/><is/><here/></pretend>]]></value>
         </result>
     </results>
