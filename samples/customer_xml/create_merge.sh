@@ -1,6 +1,6 @@
 #!/bin/bash
-validateFile=merged_validation.xml
-discoverFile=merged_discovery.xml
+validateFile=$1
+discoverFile=$2
 
 function merge_files
 {
