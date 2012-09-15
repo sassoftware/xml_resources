@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<validation_report>
+  <errors>
+    <apache_configuration>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail>Apache not started</detail>
+          <message>General error: apache not running</message>
+        </error>
+        <error>
+          <code>1</code>
+          <detail>Traceback: A bunch of tb data</detail>
+          <message>Error when stuff broke, fix it</message>
+        </error>
+      </error_list>
+    </apache_configuration>
+    <tomcat_configuration>
+      <error_list>
+        <error>
+          <code>-1</code>
+          <detail>File tomcat_checker not found</detail>
+          <message>File tomcat_checker not found</message>
+        </error>
+      </error_list>
+    </tomcat_configuration>
+  </errors>
+  <extensions>
+    <apache_configuration>
+      <name>apache_configuration</name>
+      <details>Apache report details</details>
+      <message>Apache report summary</message>
+      <probes>
+        <port_check>
+          <message>Apache not running on port</message>
+          <name>Apache Port Check</name>
+          <status>false</status>
+        </port_check>
+        <debug_check>
+          <message>Apache debug 5</message>
+          <name>Apache Debug Check</name>
+          <status>true</status>
+        </debug_check>
+      </probes>
+    </apache_configuration>
+    <cim_configuration>
+      <name>cim_configuration</name>
+      <details>CIM report details</details>
+      <message>CIM report summary</message>
+      <probes>
+        <cim_check>
+          <message>Running</message>
+          <name>CIM Service Check</name>
+          <status>true</status>
+        </cim_check>
+      </probes>
+    </cim_configuration>
+  </extensions>
+</validation_report>
