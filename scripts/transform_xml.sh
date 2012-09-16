@@ -1,13 +1,14 @@
 #!/bin/bash
 
 xslFile=$1
-shift
+outputDir=$2
+shift 2
 inputFiles=$@
 
 rc=0
 for file in $inputFiles
 do
-  xsltproc $xslFile $file > $file.transformed
+  xsltproc $xslFile $file > $outputDir/$file
   rc=$?
   if [ "$rc" -ne "0" ]; then
     break;

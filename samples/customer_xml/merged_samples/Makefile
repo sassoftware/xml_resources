@@ -14,5 +14,5 @@
 
 XML_FILES = $(wildcard *.xml)
 
-transform:
-	../../../scripts/transform_xml.sh ../../../xsl/rpath-configurator-1.0.xsl $(XML_FILES) > /dev/null
+test:
+	./test.sh
