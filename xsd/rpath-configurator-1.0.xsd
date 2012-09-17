@@ -12,7 +12,7 @@
       <xs:element name="display_name" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
       <xs:element name="summary" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
       <xs:element name="details" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>      
-      <xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="0"></xs:element>   
+      <xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="1"></xs:element>   
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="checks" type="ConfigChecks" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>   
@@ -24,7 +24,6 @@
     <xs:all>
       <xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
       <xs:element name="display_name" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
-      <xs:element name="success" type="xs:boolean" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="results" type="ConfigResults" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>    
