@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<discovery_report>
+  <extensions>
+    <cim_configuration>
+      <name>CIM Configuration Checker</name>
+      <probes>
+        <cim_config_file>
+          <name>CIM Config File</name>
+          <value><![CDATA[Pretend these are the contents of the cim config file]]></value>
+        </cim_config_file>
+      </probes>
+    </cim_configuration>
+  </extensions>
+  <status>pass</status>
+</discovery_report>

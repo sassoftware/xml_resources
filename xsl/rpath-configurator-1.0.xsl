@@ -5,17 +5,13 @@
   
   For example:
   
-  <validate>
+  <validation_reports>
     <validation_report/>
-  </validate>
+  </validation_reports>
   
-  <discover>
+  <discovery_reports>
     <discover_report/>
-  </discover>
-  
-  <read>
-    <read_report/>
-  </read>
+  </discovery_reports>
  -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
@@ -29,7 +25,7 @@
       <xsl:if test="count(descendant::error) > 0">
 	      <xsl:element name="errors">
 	    
-		      <!-- Loop over each inidividual report -->
+		      <!-- Loop over each individual report -->
 		      <xsl:for-each select="validation_report">
 		        <xsl:variable name="validator_name" select="name"/>
 		        
@@ -60,7 +56,7 @@
       <xsl:if test="count(descendant::check) > 0">
         <xsl:element name="extensions">
       
-          <!-- Loop over each inidividual report -->
+          <!-- Loop over each individual report -->
           <xsl:for-each select="validation_report">
             <xsl:variable name="validator_name" select="name"/>
             
@@ -96,6 +92,16 @@
           </xsl:for-each>
         </xsl:element>
       </xsl:if>
+      
+      <!-- Add overall success flag -->
+      <xsl:choose>
+       <xsl:when test="count(validation_report/success[text() = 'false']) > 0">
+         <xsl:element name="status">fail</xsl:element>
+       </xsl:when>
+       <xsl:otherwise>
+         <xsl:element name="status">pass</xsl:element>
+       </xsl:otherwise>
+     </xsl:choose>
     
     </xsl:element>
     
@@ -103,13 +109,16 @@
   
   <xsl:template match="/discovery_reports">
     
-    <xsl:element name="discovery_reports">
+    <xsl:element name="discovery_report">
+    
+      <!-- Store whether or not there were errors -->
+      <xsl:variable name="has_errors" select="count(descendant::error) > 0"/>
     
       <!-- Process errors -->
-      <xsl:if test="count(descendant::error) > 0">
+      <xsl:if test="$has_errors">
         <xsl:element name="errors">
       
-          <!-- Loop over each inidividual report -->
+          <!-- Loop over each individual report -->
           <xsl:for-each select="discovery_report">
             <xsl:variable name="discovery_name" select="name"/>
             
@@ -140,7 +149,7 @@
       <xsl:if test="count(descendant::result) > 0">
         <xsl:element name="extensions">
       
-          <!-- Loop over each inidividual report -->
+          <!-- Loop over each individual report -->
           <xsl:for-each select="discovery_report">
             <xsl:variable name="discovery_name" select="name"/>
             
@@ -167,6 +176,16 @@
           </xsl:for-each>
         </xsl:element>
       </xsl:if>
+      
+      <!-- Add overall status flag -->
+      <xsl:choose>
+       <xsl:when test="$has_errors">
+         <xsl:element name="status">fail</xsl:element>
+       </xsl:when>
+       <xsl:otherwise>
+         <xsl:element name="status">pass</xsl:element>
+       </xsl:otherwise>
+     </xsl:choose>
     
     </xsl:element>
     

@@ -56,4 +56,5 @@
       </probes>
     </cim_configuration>
   </extensions>
+  <status>fail</status>
 </validation_report>

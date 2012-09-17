@@ -1,0 +1,16 @@
+<validation_reports>
+<validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>tomcat_configuration</name>
+    <display_name>Tomcat Configuration Validator</display_name>
+    <success>true</success>
+    <summary>Tomcat Configuration Validator report summary</summary>
+    <details>Tomcat Configuration Validator report details</details>
+    <errors>
+        <error>
+            <code>-1</code>
+            <details>File tomcat_checker not found</details>
+            <summary>File tomcat_checker not found</summary>
+        </error>
+    </errors>
+</validation_report>
+</validation_reports>

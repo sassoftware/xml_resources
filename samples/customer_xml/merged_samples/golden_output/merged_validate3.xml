@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<validation_report>
+  <extensions>
+    <cim_configuration>
+      <name>cim_configuration</name>
+      <details>CIM report details</details>
+      <message>CIM report summary</message>
+      <probes>
+        <cim_check>
+          <message>Running</message>
+          <name>CIM Service Check</name>
+          <status>true</status>
+        </cim_check>
+      </probes>
+    </cim_configuration>
+  </extensions>
+  <status>fail</status>
+</validation_report>
