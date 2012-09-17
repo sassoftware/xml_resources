@@ -15,4 +15,4 @@
 XML_FILES = $(wildcard *.xml)
 
 test:
-	../../scripts/validate_xml.sh ../../xsd/rpath-configurator-1.0.xsd $(XML_FILES) > /dev/null
+	../scripts/validate_xml.sh ../xsd/rpath-configurator-1.0.xsd $(XML_FILES) > /dev/null
