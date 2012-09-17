@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<validation_report>
+  <errors>
+    <apache_configuration>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail><![CDATA[Apache not started]]></detail>
+          <message>General error: apache not running</message>
+        </error>
+        <error>
+          <code>1</code>
+          <detail><![CDATA[Traceback: A bunch of tb data]]></detail>
+          <message>Error when stuff broke, fix it</message>
+        </error>
+      </error_list>
+    </apache_configuration>
+    <tomcat_configuration>
+      <error_list>
+        <error>
+          <code>-1</code>
+          <detail><![CDATA[File tomcat_checker not found]]></detail>
+          <message>File tomcat_checker not found</message>
+        </error>
+      </error_list>
+    </tomcat_configuration>
+    <validate_invalid1.ps1>
+      <error_list>
+        <error>
+          <code>2319</code>
+          <detail><![CDATA[The element 'validation_report' has invalid child element 'THISWONTVALIDATE'. List of possible elements expected: 'details, summary, errors, name, success, checks, display_name'.]]></detail>
+          <message>Error Summary goes here...</message>
+        </error>
+      </error_list>
+    </validate_invalid1.ps1>
+  </errors>
+  <extensions>
+    <apache_configuration>
+      <name>apache_configuration</name>
+      <details><![CDATA[Apache report details]]></details>
+      <message>Apache report summary</message>
+      <probes>
+        <port_check>
+          <message>Apache not running on port</message>
+          <details><![CDATA[Apache Port check output here]]></details>
+          <name>Apache Port Check</name>
+          <status>false</status>
+        </port_check>
+        <debug_check>
+          <message>Apache debug 5</message>
+          <details><![CDATA[Apache debug check output here]]></details>
+          <name>Apache Debug Check</name>
+          <status>true</status>
+        </debug_check>
+      </probes>
+    </apache_configuration>
+    <cim_configuration>
+      <name>cim_configuration</name>
+      <details><![CDATA[CIM report details]]></details>
+      <message>CIM report summary</message>
+      <probes>
+        <cim_check>
+          <message>Running</message>
+          <details><![CDATA[CIM Service Check output here]]></details>
+          <name>CIM Service Check</name>
+          <status>true</status>
+        </cim_check>
+      </probes>
+    </cim_configuration>
+  </extensions>
+  <status>fail</status>
+</validation_report>

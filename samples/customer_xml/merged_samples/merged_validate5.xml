@@ -1,0 +1,81 @@
+<validation_reports>
+  <validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>apache_configuration</name>
+    <display_name>Apache Configuration Validator</display_name>
+    <success>true</success>
+    <summary>Apache report summary</summary>
+    <details>Apache report details</details>
+    <errors>
+      <error>
+        <code>500</code>
+        <details><![CDATA[Apache not started]]></details>
+        <summary>General error: apache not running</summary>
+      </error>
+      <error>
+        <code>1</code>
+        <details><![CDATA[Traceback: A bunch of tb data]]></details>
+        <summary>Error when stuff broke, fix it</summary>
+      </error>
+    </errors>
+    <checks>
+      <check>
+        <summary>Apache not running on port</summary>
+        <details><![CDATA[Apache Port check output here]]></details>
+        <display_name>Apache Port Check</display_name>
+        <name>port_check</name>
+        <success>false</success>
+      </check>
+      <check>
+        <summary>Apache debug 5</summary>
+        <details><![CDATA[Apache debug check output here]]></details>
+        <display_name>Apache Debug Check</display_name>
+        <name>debug_check</name>
+        <success>true</success>
+      </check>
+    </checks>
+  </validation_report>
+  <validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>cim_configuration</name>
+    <display_name>Apache Configuration Validator</display_name>
+    <success>true</success>
+    <summary>CIM report summary</summary>
+    <details>CIM report details</details>
+    <checks>
+      <check>
+        <summary>Running</summary>
+        <details><![CDATA[CIM Service Check output here]]></details>
+        <display_name>CIM Service Check</display_name>
+        <name>cim_check</name>
+        <success>true</success>
+      </check>
+    </checks>
+  </validation_report>
+  <validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>tomcat_configuration</name>
+    <display_name>Tomcat Configuration Validator</display_name>
+    <success>false</success>
+    <summary>Tomcat Configuration Validator report summary</summary>
+    <details>Tomcat Configuration Validator report details</details>
+    <errors>
+      <error>
+        <code>-1</code>
+        <details><![CDATA[File tomcat_checker not found]]></details>
+        <summary>File tomcat_checker not found</summary>
+      </error>
+    </errors>
+  </validation_report>
+  <validation_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>validate_invalid1.ps1</name>
+    <display_name>validate_invalid1.ps1</display_name>
+    <success>false</success>
+    <summary>Summary goes here...</summary>
+    <details>Details go here...</details>
+    <errors>
+      <error>
+        <code>2319</code>
+        <details>The element 'validation_report' has invalid child element 'THISWONTVALIDATE'. List of possible elements expected: 'details, summary, errors, name, success, checks, display_name'.</details>
+        <summary>Error Summary goes here...</summary>
+      </error>
+    </errors>
+  </validation_report>
+</validation_reports>
