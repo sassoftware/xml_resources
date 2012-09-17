@@ -4,7 +4,7 @@
     <errors>
         <error>
             <code>__error_code__</code>
-            <details>__error_details__</details>
+            <details><![CDATA[__error_details__]]></details>
             <summary>__error_summary__</summary>
         </error>
     </errors>
