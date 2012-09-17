@@ -1,0 +1,31 @@
+A little bit of info about what these files test:
+
+validate1
+--multiple errors
+--multiple checks
+--overlal rollup of success, so errors ignored
+
+validate2
+--no errors
+--single check
+--no overall rollup status, so overall is a success
+
+validate3
+--no checks
+--single error
+--no overall rollup status, so overall is a failed validation
+
+discover1
+--multiple errors
+--multiple results
+--overlal rollup of success, so errors ignored
+
+discover2
+--no errors
+--single resut
+--no overall rollup status, so overall is a success
+
+discover3
+--no checks
+--single error
+--no overall rollup status, so overall is a failed validation
