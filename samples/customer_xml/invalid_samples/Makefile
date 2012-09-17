@@ -15,4 +15,4 @@
 XML_FILES = $(wildcard *.xml)
 
 validate:
-	../../../scripts/validate_xml.sh ../../../xsd/rpath-configurator-1.0.xsd $(XML_FILES) > /dev/null
+	../../../scripts/ensure_invalid_xml.sh ../../../xsd/rpath-configurator-1.0.xsd $(XML_FILES) > /dev/null
