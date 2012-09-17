@@ -7,7 +7,7 @@
     <checks>
         <check>
             <summary>Running</summary>
-            <details>CIM Service Check output here</details>
+            <details><![CDATA[CIM Service Check output here]]></details>
             <display_name>CIM Service Check</display_name>
             <name>cim_check</name>
             <success>true</success>

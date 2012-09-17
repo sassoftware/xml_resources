@@ -5,12 +5,12 @@
       <error_list>
         <error>
           <code>500</code>
-          <detail>Failed to locate file</detail>
+          <detail><![CDATA[Failed to locate file]]></detail>
           <message>General error: file not found</message>
         </error>
         <error>
           <code>1</code>
-          <detail>Traceback: A bunch of tb data</detail>
+          <detail><![CDATA[Traceback: A bunch of tb data]]></detail>
           <message>Error when stuff broke, fix it</message>
         </error>
       </error_list>
@@ -19,7 +19,7 @@
       <error_list>
         <error>
           <code>500</code>
-          <detail>Failed to locate file</detail>
+          <detail><![CDATA[Failed to locate file]]></detail>
           <message>General error: file not found</message>
         </error>
       </error_list>

@@ -5,12 +5,12 @@
     <errors>
         <error>
             <code>500</code>
-            <details>Failed to locate file</details>
+            <details><![CDATA[Failed to locate file]]></details>
             <summary>General error: file not found</summary>
         </error>
         <error>
             <code>1</code>
-            <details>Traceback: A bunch of tb data</details>
+            <details><![CDATA[Traceback: A bunch of tb data]]></details>
             <summary>Error when stuff broke, fix it</summary>
         </error>
     </errors>
@@ -18,7 +18,7 @@
         <result>
             <display_name>Apache Config File</display_name>
             <name>apache_config</name>
-            <value>Pretend these are the contents of the apache config file</value>
+            <value><![CDATA[Pretend these are the contents of the apache config file]]></value>
         </result>
         <result>
             <display_name>My XML Blob</display_name>
@@ -34,7 +34,7 @@
         <result>
             <display_name>CIM Config File</display_name>
             <name>cim_config_file</name>
-            <value>Pretend these are the contents of the cim config file</value>
+            <value><![CDATA[Pretend these are the contents of the cim config file]]></value>
         </result>
     </results>
 </discovery_report>
@@ -44,7 +44,7 @@
     <errors>
         <error>
             <code>500</code>
-            <details>Failed to locate file</details>
+            <details><![CDATA[Failed to locate file]]></details>
             <summary>General error: file not found</summary>
         </error>
     </errors>

@@ -5,7 +5,7 @@
         <result>
             <display_name>CIM Config File</display_name>
             <name>cim_config_file</name>
-            <value>Pretend these are the contents of the cim config file</value>
+            <value><![CDATA[Pretend these are the contents of the cim config file]]></value>
         </result>
     </results>
 </discovery_report>

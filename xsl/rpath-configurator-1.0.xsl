@@ -15,7 +15,7 @@
  -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
-  <xsl:output method="xml" version="1.0" indent="yes" cdata-section-elements ="value"/> 
+  <xsl:output method="xml" version="1.0" indent="yes" cdata-section-elements ="value details detail"/> 
     
   <xsl:template match="/validation_reports">
     
@@ -78,6 +78,9 @@
 			                <xsl:element name="message">
 			                  <xsl:value-of select="summary"/>
 			                </xsl:element>
+			                <xsl:element name="details">
+                        <xsl:value-of select="details"/>
+                      </xsl:element>
 			                <xsl:element name="name">
 			                  <xsl:value-of select="display_name"/>
 			                </xsl:element>

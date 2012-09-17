@@ -4,11 +4,11 @@
     <display_name>Apache Configuration Validator</display_name>
     <success>true</success>
     <summary>CIM report summary</summary>
-    <details>CIM report details</details>
+    <details><![CDATA[CIM report details]]></details>
     <checks>
         <check>
             <summary>Running</summary>
-            <details>CIM Service Check output here</details>
+            <details><![CDATA[CIM Service Check output here]]></details>
             <display_name>CIM Service Check</display_name>
             <name>cim_check</name>
             <success>true</success>

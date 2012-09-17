@@ -4,7 +4,7 @@
     <errors>
         <error>
             <code>500</code>
-            <details>Failed to locate file</details>
+            <details><![CDATA[Failed to locate file]]></details>
             <summary>General error: file not found</summary>
         </error>
     </errors>

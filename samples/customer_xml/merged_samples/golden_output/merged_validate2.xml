@@ -3,11 +3,12 @@
   <extensions>
     <cim_configuration>
       <name>cim_configuration</name>
-      <details>CIM report details</details>
+      <details><![CDATA[CIM report details]]></details>
       <message>CIM report summary</message>
       <probes>
         <cim_check>
           <message>Running</message>
+          <details><![CDATA[CIM Service Check output here]]></details>
           <name>CIM Service Check</name>
           <status>true</status>
         </cim_check>

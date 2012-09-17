@@ -7,26 +7,26 @@
     <errors>
         <error>
             <code>500</code>
-            <details>Apache not started</details>
+            <details><![CDATA[Apache not started]]></details>
             <summary>General error: apache not running</summary>
         </error>
         <error>
             <code>1</code>
-            <details>Traceback: A bunch of tb data</details>
+            <details><![CDATA[Traceback: A bunch of tb data]]></details>
             <summary>Error when stuff broke, fix it</summary>
         </error>
     </errors>
     <checks>
         <check>
             <summary>Apache not running on port</summary>
-            <details>Apache Port check output here</details>
+            <details><![CDATA[Apache Port check output here]]></details>
             <display_name>Apache Port Check</display_name>
             <name>port_check</name>
             <success>false</success>
         </check>
         <check>
             <summary>Apache debug 5</summary>
-            <details>Apache debug check output here</details>
+            <details><![CDATA[Apache debug check output here]]></details>
             <display_name>Apache Debug Check</display_name>
             <name>debug_check</name>
             <success>true</success>
