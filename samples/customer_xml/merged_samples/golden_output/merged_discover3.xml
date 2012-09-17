@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<discovery_report>
+  <errors>
+    <apache_configuration>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail><![CDATA[Failed to locate file]]></detail>
+          <message>General error: file not found</message>
+        </error>
+        <error>
+          <code>1</code>
+          <detail><![CDATA[Traceback: A bunch of tb data]]></detail>
+          <message>Error when stuff broke, fix it</message>
+        </error>
+      </error_list>
+    </apache_configuration>
+    <tomcat_configuration>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail><![CDATA[Failed to locate file]]></detail>
+          <message>General error: file not found</message>
+        </error>
+      </error_list>
+    </tomcat_configuration>
+    <config_error-6582f3c6-8af6-4f4d-bac8-485df0ed6d8c>
+      <error_list>
+        <error>
+          <code>2319</code>
+          <detail><![CDATA[The element 'discovery_report' has invalid child element 'THISWONTVALIDATE'. List of possible elements expected: 'display_name, name, results, errors'.]]></detail>
+          <message>Error Summary goes here...</message>
+        </error>
+      </error_list>
+    </config_error-6582f3c6-8af6-4f4d-bac8-485df0ed6d8c>
+  </errors>
+  <extensions>
+    <apache_configuration>
+      <name>Apache Configuration Checker</name>
+      <probes>
+        <apache_config>
+          <name>Apache Config File</name>
+          <value><![CDATA[Pretend these are the contents of the apache config file]]></value>
+        </apache_config>
+        <my_xml_blob>
+          <name>My XML Blob</name>
+          <value><![CDATA[<pretend><something/><is/><here/></pretend>]]></value>
+        </my_xml_blob>
+      </probes>
+    </apache_configuration>
+    <cim_configuration>
+      <name>CIM Configuration Checker</name>
+      <probes>
+        <cim_config_file>
+          <name>CIM Config File</name>
+          <value><![CDATA[Pretend these are the contents of the cim config file]]></value>
+        </cim_config_file>
+      </probes>
+    </cim_configuration>
+  </extensions>
+  <status>fail</status>
+</discovery_report>

@@ -1,0 +1,63 @@
+<discovery_reports>
+  <discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>apache_configuration</name>
+    <display_name>Apache Configuration Checker</display_name>
+    <errors>
+      <error>
+        <code>500</code>
+        <details><![CDATA[Failed to locate file]]></details>
+        <summary>General error: file not found</summary>
+      </error>
+      <error>
+        <code>1</code>
+        <details><![CDATA[Traceback: A bunch of tb data]]></details>
+        <summary>Error when stuff broke, fix it</summary>
+      </error>
+    </errors>
+    <results>
+      <result>
+        <display_name>Apache Config File</display_name>
+        <name>apache_config</name>
+        <value><![CDATA[Pretend these are the contents of the apache config file]]></value>
+      </result>
+      <result>
+        <display_name>My XML Blob</display_name>
+        <name>my_xml_blob</name>
+        <value><![CDATA[<pretend><something/><is/><here/></pretend>]]></value>
+      </result>
+    </results>
+  </discovery_report>
+  <discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>cim_configuration</name>
+    <display_name>CIM Configuration Checker</display_name>
+    <results>
+      <result>
+        <display_name>CIM Config File</display_name>
+        <name>cim_config_file</name>
+        <value><![CDATA[Pretend these are the contents of the cim config file]]></value>
+      </result>
+    </results>
+  </discovery_report>
+  <discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>tomcat_configuration</name>
+    <display_name>Tomcat Configuration Checker</display_name>
+    <errors>
+      <error>
+        <code>500</code>
+        <details><![CDATA[Failed to locate file]]></details>
+        <summary>General error: file not found</summary>
+      </error>
+    </errors>
+  </discovery_report>
+  <discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>config_error-6582f3c6-8af6-4f4d-bac8-485df0ed6d8c</name>
+    <display_name>discover_invalid1.ps1</display_name>
+    <errors>
+      <error>
+        <code>2319</code>
+        <details>The element 'discovery_report' has invalid child element 'THISWONTVALIDATE'. List of possible elements expected: 'display_name, name, results, errors'.</details>
+        <summary>Error Summary goes here...</summary>
+      </error>
+    </errors>
+  </discovery_report>
+</discovery_reports>
