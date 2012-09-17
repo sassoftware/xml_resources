@@ -16,7 +16,7 @@
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="checks" type="ConfigChecks" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>   
-    <xs:attribute name="version" type="xs:string"></xs:attribute>
+    <xs:attribute name="version" type="xs:decimal"></xs:attribute>
   </xs:complexType>
 
   <!-- Discovery report complex type -->
@@ -27,7 +27,7 @@
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="results" type="ConfigResults" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>    
-    <xs:attribute name="version" type="xs:string"></xs:attribute>
+    <xs:attribute name="version" type="xs:decimal"></xs:attribute>
   </xs:complexType>
   
 
