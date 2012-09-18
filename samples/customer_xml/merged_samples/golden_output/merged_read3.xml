@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<observed_properties>
+  <errors>
+    <apache_configuration>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail><![CDATA[Apache not started]]></detail>
+          <message>General error: apache not running</message>
+        </error>
+        <error>
+          <code>1</code>
+          <detail><![CDATA[Traceback: A bunch of tb data]]></detail>
+          <message>Error when stuff broke, fix it</message>
+        </error>
+      </error_list>
+    </apache_configuration>
+    <tomcat_configuration>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail><![CDATA[Tomcat not started]]></detail>
+          <message>General error: apache not running</message>
+        </error>
+      </error_list>
+    </tomcat_configuration>
+  </errors>
+  <status>fail</status>
+</observed_properties>

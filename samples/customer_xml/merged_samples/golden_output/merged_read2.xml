@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<observed_properties>
+  <extensions>
+    <apache_configuration>
+      <port>81</port>
+      <debug_level>true</debug_level>
+    </apache_configuration>
+    <cim_configuration>
+      <port>5678</port>
+    </cim_configuration>
+  </extensions>
+  <status>pass</status>
+</observed_properties>
