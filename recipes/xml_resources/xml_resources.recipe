@@ -1,0 +1,20 @@
+#
+# Copyright (c) 2012 rPath, Inc.
+# All rights reserved
+#
+
+class XMLResources(PackageRecipe):
+    name = 'xml_resources'
+    version = '0'
+    buildRequires = [ 'make:runtime', 'libxslt:runtime', 'libxml2:runtime']
+
+    Flags.test = False
+
+    def setup(r):
+        r.addMercurialSnapshot()
+        r.Make('test')
+
+        # install the artifacts
+        r.Install('xsd/*.xsd', '/usr/share/rpath_xml_resources/xsd/')
+        r.Install('xsl/*.xsl', '/usr/share/rpath_xml_resources/xsl/')
+        r.Install('templates/*.xml', '/usr/share/rpath_xml_resources/templates/')
