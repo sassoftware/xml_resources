@@ -6,7 +6,7 @@
 class XMLResources(PackageRecipe):
     name = 'xml_resources'
     version = '0'
-    buildRequires = [ 'make:runtime', 'libxslt:runtime', 'libxml2:runtime']
+    buildRequires = [ 'make:runtime', 'libxslt:runtime', 'libxml2:runtime', 'diffutils:runtime']
 
     Flags.test = False
 
