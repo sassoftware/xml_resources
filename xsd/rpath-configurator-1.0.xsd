@@ -25,7 +25,7 @@
       <xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
       <xs:element name="display_name" type="xs:normalizedString" maxOccurs="1" minOccurs="1"></xs:element>
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
-      <xs:element name="results" type="ConfigResults" maxOccurs="1" minOccurs="0"></xs:element>
+      <xs:element name="result" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>    
     <xs:attribute name="version" type="xs:decimal"></xs:attribute>
   </xs:complexType>
@@ -60,20 +60,6 @@
   <xs:complexType name="ConfigChecks">
   	<xs:sequence>
   		<xs:element name="check" type="ConfigCheck" maxOccurs="unbounded" minOccurs="0"></xs:element>
-  	</xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="ConfigResult">
-  	<xs:all>
-  		<xs:element name="display_name" type="xs:normalizedString"></xs:element>
-  		<xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
-  		<xs:element name="value" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
-  	</xs:all>
-  </xs:complexType>
-
-  <xs:complexType name="ConfigResults">
-  	<xs:sequence>
-      <xs:element name="result" type="ConfigResult" maxOccurs="unbounded" minOccurs="1"></xs:element>
   	</xs:sequence>
   </xs:complexType>
 </xs:schema>

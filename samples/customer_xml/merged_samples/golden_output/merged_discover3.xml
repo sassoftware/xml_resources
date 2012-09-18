@@ -38,23 +38,19 @@
     <apache_configuration>
       <name>Apache Configuration Checker</name>
       <probes>
-        <apache_config>
-          <name>Apache Config File</name>
-          <value><![CDATA[Pretend these are the contents of the apache config file]]></value>
-        </apache_config>
-        <my_xml_blob>
-          <name>My XML Blob</name>
+        <apache_configuration>
+          <name>Apache Configuration Checker</name>
           <value><![CDATA[<pretend><something/><is/><here/></pretend>]]></value>
-        </my_xml_blob>
+        </apache_configuration>
       </probes>
     </apache_configuration>
     <cim_configuration>
       <name>CIM Configuration Checker</name>
       <probes>
-        <cim_config_file>
-          <name>CIM Config File</name>
+        <cim_configuration>
+          <name>CIM Configuration Checker</name>
           <value><![CDATA[Pretend these are the contents of the cim config file]]></value>
-        </cim_config_file>
+        </cim_configuration>
       </probes>
     </cim_configuration>
   </extensions>

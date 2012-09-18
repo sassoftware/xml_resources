@@ -169,23 +169,21 @@
           <xsl:for-each select="discovery_report">
             <xsl:variable name="discovery_name" select="name"/>
             
-            <xsl:if test="results">
+            <xsl:if test="result">
               <xsl:element name="{$discovery_name}">
                 <xsl:element name="name">
                   <xsl:value-of select="display_name"/>
                 </xsl:element>
                 <xsl:element name="probes">
-                  <xsl:for-each select="results/result">
-                    <xsl:variable name="result_name" select="name" />
-                    <xsl:element name="{$result_name}">
-                      <xsl:element name="name">
-				                <xsl:value-of select="display_name"/>
-				              </xsl:element>
-				              <xsl:element name="value">
-				                <xsl:value-of select="value"/>
-				              </xsl:element>
-                    </xsl:element>
-                  </xsl:for-each>
+                  <xsl:variable name="result_name" select="name" />
+                  <xsl:element name="{$result_name}">
+                    <xsl:element name="name">
+		                <xsl:value-of select="display_name"/>
+		              </xsl:element>
+		              <xsl:element name="value">
+		                <xsl:value-of select="result"/>
+		              </xsl:element>
+                  </xsl:element>
                 </xsl:element>
               </xsl:element>
             </xsl:if>

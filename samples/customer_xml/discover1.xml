@@ -13,16 +13,5 @@
             <summary>Error when stuff broke, fix it</summary>
         </error>
     </errors>
-    <results>
-        <result>
-            <display_name>Apache Config File</display_name>
-            <name>apache_config</name>
-            <value><![CDATA[Pretend these are the contents of the apache config file]]></value>
-        </result>
-        <result>
-            <display_name>My XML Blob</display_name>
-            <name>my_xml_blob</name>
-            <value><![CDATA[<pretend><something/><is/><here/></pretend>]]></value>
-        </result>
-    </results>
+    <result><![CDATA[<pretend><something/><is/><here/></pretend>]]></result>
 </discovery_report>
