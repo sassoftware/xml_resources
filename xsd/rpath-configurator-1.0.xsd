@@ -4,6 +4,7 @@
   <!-- rPath configuration top level elements -->
   <xs:element name="validation_report" type="ConfigValidationReport"></xs:element>
   <xs:element name="discovery_report" type="ConfigDiscoveryReport"></xs:element>
+  <xs:element name="read_report" type="ConfigReadReport"></xs:element>
 
   <!-- Validation report complex type -->
   <xs:complexType name="ConfigValidationReport">
@@ -30,6 +31,15 @@
     <xs:attribute name="version" type="xs:decimal"></xs:attribute>
   </xs:complexType>
   
+  <!-- Read report complex type -->
+  <xs:complexType name="ConfigReadReport">
+    <xs:all>
+      <xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
+      <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
+      <xs:element name="properties" type="ConfigProperties" maxOccurs="1" minOccurs="0"></xs:element>
+    </xs:all>    
+    <xs:attribute name="version" type="xs:decimal"></xs:attribute>
+  </xs:complexType>
 
   <!--  Generic complex types -->
 
@@ -61,5 +71,18 @@
   	<xs:sequence>
   		<xs:element name="check" type="ConfigCheck" maxOccurs="unbounded" minOccurs="0"></xs:element>
   	</xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="ConfigProperty">
+    <xs:all>
+      <xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
+      <xs:element name="value" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ConfigProperties">
+    <xs:sequence>
+      <xs:element name="property" type="ConfigProperty" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    </xs:sequence>
   </xs:complexType>
 </xs:schema>

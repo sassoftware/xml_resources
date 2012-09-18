@@ -1,0 +1,10 @@
+<read_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+    <name>tomcat_configuration</name>
+    <errors>
+        <error>
+            <code>500</code>
+            <details><![CDATA[Tomcat not started]]></details>
+            <summary>General error: apache not running</summary>
+        </error>
+    </errors>
+</read_report>
