@@ -17,7 +17,7 @@
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="checks" type="ConfigChecks" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>   
-    <xs:attribute name="version" type="xs:decimal"></xs:attribute>
+    <xs:attribute name="version" type="Version" use="required"></xs:attribute>
   </xs:complexType>
 
   <!-- Discovery report complex type -->
@@ -28,7 +28,7 @@
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="result" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>    
-    <xs:attribute name="version" type="xs:decimal"></xs:attribute>
+    <xs:attribute name="version" type="Version" use="required"></xs:attribute>
   </xs:complexType>
   
   <!-- Read report complex type -->
@@ -38,7 +38,7 @@
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="properties" type="ConfigProperties" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>    
-    <xs:attribute name="version" type="xs:decimal"></xs:attribute>
+    <xs:attribute name="version" type="Version" use="required"></xs:attribute>
   </xs:complexType>
 
   <!--  Generic complex types -->
@@ -85,4 +85,11 @@
       <xs:element name="property" type="ConfigProperty" maxOccurs="unbounded" minOccurs="0"></xs:element>
     </xs:sequence>
   </xs:complexType>
+  
+  <xs:simpleType name="Version">
+    <xs:restriction base="xs:decimal">
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="2.0"/>
+    </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

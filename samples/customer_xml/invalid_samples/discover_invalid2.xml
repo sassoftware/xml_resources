@@ -1,0 +1,5 @@
+<discovery_report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
+    <name>cim_configuration</name>
+    <display_name>CIM Configuration Checker</display_name>
+    <result><![CDATA[Pretend these are the contents of the cim config file]]></result>
+</discovery_report>

@@ -2,13 +2,17 @@
 
 schemaFile=$1
 shift
+inputFiles=$@
 
-xmllint -schema $schemaFile $@ 2> /dev/null
-rc=$?
-if [ "$rc" -ne "0" ]; then
-  # succeed if xml is invalid
-  echo "Test for invalid XML by schema passed"
-  exit 0
-fi
+for file in $inputFiles
+do
+  xmllint -schema $schemaFile $file 2> /dev/null
+  rc=$?
+  if [ "$rc" -eq "0" ]; then
+    echo "File validated when it should not have: $file"
+    exit 1
+  fi
+done
 
-exit $rc
+echo "Test for invalid XML by schema passed"
+exit 0

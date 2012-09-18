@@ -1,0 +1,16 @@
+<validation_report version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
+    <name>cim_configuration</name>
+    <display_name>Apache Configuration Validator</display_name>
+    <success>true</success>
+    <summary>CIM report summary</summary>
+    <details>CIM report details</details>
+    <checks>
+        <check>
+            <summary>Running</summary>
+            <details><![CDATA[CIM Service Check output here]]></details>
+            <display_name>CIM Service Check</display_name>
+            <name>cim_check</name>
+            <success>true</success>
+        </check> 
+    </checks>
+</validation_report>

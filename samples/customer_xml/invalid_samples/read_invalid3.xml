@@ -1,0 +1,9 @@
+<read_report version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
+    <name>cim_configuration</name>
+    <properties>
+        <property>
+            <name>port</name>
+            <value>5678</value>
+        </property>
+    </properties>
+</read_report>
