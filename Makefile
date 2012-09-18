@@ -8,3 +8,4 @@ all:
 
 test:
 	$(MAKE) -C samples/customer_xml test
+	$(MAKE) -C templates test
