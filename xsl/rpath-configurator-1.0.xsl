@@ -71,6 +71,14 @@
                 <xsl:element name="message">
                   <xsl:value-of select="summary"/>
                 </xsl:element>
+                <xsl:choose>
+                   <xsl:when test="success[text() = 'false']">
+                     <xsl:element name="status">fail</xsl:element>
+                   </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:element name="status">pass</xsl:element>
+                  </xsl:otherwise>
+                </xsl:choose>
                 <xsl:element name="probes">
                   <xsl:for-each select="checks/check">
                     <xsl:variable name="check_name" select="name" />
@@ -84,9 +92,14 @@
 			                <xsl:element name="name">
 			                  <xsl:value-of select="display_name"/>
 			                </xsl:element>
-			                <xsl:element name="status">
-			                  <xsl:value-of select="success"/>
-			                </xsl:element>
+			                <xsl:choose>
+                        <xsl:when test="success[text() = 'false']">
+                          <xsl:element name="status">fail</xsl:element>
+                        </xsl:when>
+                       <xsl:otherwise>
+                         <xsl:element name="status">pass</xsl:element>
+                       </xsl:otherwise>
+                     </xsl:choose>
                     </xsl:element>
                   </xsl:for-each>
                 </xsl:element>

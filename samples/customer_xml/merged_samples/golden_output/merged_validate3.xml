@@ -5,12 +5,13 @@
       <name>cim_configuration</name>
       <details><![CDATA[CIM report details]]></details>
       <message>CIM report summary</message>
+      <status>fail</status>
       <probes>
         <cim_check>
           <message>Running</message>
           <details><![CDATA[CIM Service Check output here]]></details>
           <name>CIM Service Check</name>
-          <status>true</status>
+          <status>pass</status>
         </cim_check>
       </probes>
     </cim_configuration>

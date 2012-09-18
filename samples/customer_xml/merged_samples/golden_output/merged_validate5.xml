@@ -39,18 +39,19 @@
       <name>apache_configuration</name>
       <details><![CDATA[Apache report details]]></details>
       <message>Apache report summary</message>
+      <status>pass</status>
       <probes>
         <port_check>
           <message>Apache not running on port</message>
           <details><![CDATA[Apache Port check output here]]></details>
           <name>Apache Port Check</name>
-          <status>false</status>
+          <status>fail</status>
         </port_check>
         <debug_check>
           <message>Apache debug 5</message>
           <details><![CDATA[Apache debug check output here]]></details>
           <name>Apache Debug Check</name>
-          <status>true</status>
+          <status>pass</status>
         </debug_check>
       </probes>
     </apache_configuration>
@@ -58,12 +59,13 @@
       <name>cim_configuration</name>
       <details><![CDATA[CIM report details]]></details>
       <message>CIM report summary</message>
+      <status>pass</status>
       <probes>
         <cim_check>
           <message>Running</message>
           <details><![CDATA[CIM Service Check output here]]></details>
           <name>CIM Service Check</name>
-          <status>true</status>
+          <status>pass</status>
         </cim_check>
       </probes>
     </cim_configuration>
