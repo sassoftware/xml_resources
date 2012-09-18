@@ -125,7 +125,7 @@
   
   <xsl:template match="/discovery_reports">
     
-    <xsl:element name="discovery_report">
+    <xsl:element name="discovered_properties">
     
       <!-- Store whether or not there were errors -->
       <xsl:variable name="has_errors" select="count(descendant::error) > 0"/>
@@ -205,5 +205,78 @@
     
   </xsl:template>
   
+  
+  <xsl:template match="/read_reports">
+    
+    <xsl:element name="observed_properties">
+    
+      <!-- Store whether or not there were errors -->
+      <xsl:variable name="has_errors" select="count(descendant::error) > 0"/>
+    
+      <!-- Process errors -->
+      <xsl:if test="$has_errors">
+        <xsl:element name="errors">
+      
+          <!-- Loop over each individual report -->
+          <xsl:for-each select="read_report">
+            <xsl:variable name="read_name" select="name"/>
+            
+            <xsl:if test="errors">
+              <xsl:element name="{$read_name}">
+                <xsl:element name="error_list">
+                  <xsl:for-each select="errors/error">
+                    <xsl:element name="error">
+                      <xsl:element name="code">
+                        <xsl:value-of select="code"/>
+                      </xsl:element>
+                      <xsl:element name="detail">
+                        <xsl:value-of select="details"/>
+                      </xsl:element>
+                      <xsl:element name="message">
+                        <xsl:value-of select="summary"/>
+                      </xsl:element>
+                    </xsl:element>
+                  </xsl:for-each>
+                </xsl:element>
+              </xsl:element>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:element>
+      </xsl:if>
+      
+      <!-- Process properties -->
+      <xsl:if test="count(descendant::property) > 0">
+        <xsl:element name="extensions">
+      
+          <!-- Loop over each individual report -->
+          <xsl:for-each select="read_report">
+            <xsl:if test="properties">
+	            <xsl:variable name="read_name" select="name"/>
+	            <xsl:element name="{$read_name}">
+	              <xsl:for-each select="properties/property">
+		              <xsl:variable name="property_name" select="name"/>
+		              <xsl:element name="{$property_name}">
+		                <xsl:value-of select="value"/>
+		              </xsl:element>
+	              </xsl:for-each>
+	            </xsl:element>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:element>
+      </xsl:if>
+      
+      <!-- Add overall status flag -->
+      <xsl:choose>
+       <xsl:when test="$has_errors">
+         <xsl:element name="status">fail</xsl:element>
+       </xsl:when>
+       <xsl:otherwise>
+         <xsl:element name="status">pass</xsl:element>
+       </xsl:otherwise>
+     </xsl:choose>
+    
+    </xsl:element>
+    
+  </xsl:template>
   
 </xsl:stylesheet>

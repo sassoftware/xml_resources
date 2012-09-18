@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<discovery_report>
+<discovered_properties>
   <extensions>
     <cim_configuration>
       <name>CIM Configuration Checker</name>
@@ -12,4 +12,4 @@
     </cim_configuration>
   </extensions>
   <status>pass</status>
-</discovery_report>
+</discovered_properties>
