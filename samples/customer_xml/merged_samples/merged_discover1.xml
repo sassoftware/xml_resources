@@ -1,5 +1,5 @@
 <discovery_reports>
-<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
     <name>apache_configuration</name>
     <display_name>Apache Configuration Checker</display_name>
     <errors>
@@ -16,12 +16,12 @@
     </errors>
     <result><![CDATA[<pretend><something/><is/><here/></pretend>]]></result>
 </discovery_report>
-<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
     <name>cim_configuration</name>
     <display_name>CIM Configuration Checker</display_name>
     <result><![CDATA[Pretend these are the contents of the cim config file]]></result>
 </discovery_report>
-<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-1.0.xsd rpath-configurator-1.0.xsd">
+<discovery_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
     <name>tomcat_configuration</name>
     <display_name>Tomcat Configuration Checker</display_name>
     <errors>

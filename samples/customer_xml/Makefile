@@ -18,7 +18,7 @@ SUBDIRS = invalid_samples merged_samples
 all:
 
 test: test-recurse
-	../../scripts/validate_xml.sh ../../xsd/rpath-configurator-1.0.xsd $(XML_FILES) > /dev/null
+	../../scripts/validate_xml.sh ../../xsd/rpath-configurator-2.0.xsd $(XML_FILES) > /dev/null
 
 test-recurse:
 	@for i in $(SUBDIRS); do $(MAKE) -C $$i || exit 1; done
