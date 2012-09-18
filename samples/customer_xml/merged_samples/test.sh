@@ -2,7 +2,7 @@
 
 # generate the transforms
 rm -rf generated/*.xml
-../../../scripts/transform_xml.sh ../../../xsl/rpath-configurator-1.0.xsl ./generated *.xml > /dev/null
+../../../scripts/transform_xml.sh ../../../xsl/rpath-configurator-2.0.xsl ./generated *.xml > /dev/null
 
 for file in generated/*.xml
 do
