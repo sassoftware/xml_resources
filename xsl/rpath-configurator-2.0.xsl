@@ -31,6 +31,9 @@
 		        
 		        <xsl:if test="errors">
 		          <xsl:element name="{$validator_name}">
+		            <xsl:element name="name">
+		              <xsl:value-of select="$validator_name"/>
+		            </xsl:element>
 			          <xsl:element name="error_list">
 			            <xsl:for-each select="errors/error">
 		                <xsl:element name="error">
@@ -140,6 +143,9 @@
             
             <xsl:if test="errors">
               <xsl:element name="{$discovery_name}">
+                <xsl:element name="name">
+                  <xsl:value-of select="$discovery_name"/>
+                </xsl:element>
                 <xsl:element name="error_list">
                   <xsl:for-each select="errors/error">
                     <xsl:element name="error">
@@ -223,6 +229,9 @@
             
             <xsl:if test="errors">
               <xsl:element name="{$read_name}">
+                <xsl:element name="name">
+                  <xsl:value-of select="$read_name"/>
+                </xsl:element>
                 <xsl:element name="error_list">
                   <xsl:for-each select="errors/error">
                     <xsl:element name="error">
