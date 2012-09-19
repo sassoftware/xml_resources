@@ -2,6 +2,7 @@
 <observed_properties>
   <errors>
     <apache_configuration>
+      <name>apache_configuration</name>
       <error_list>
         <error>
           <code>500</code>
@@ -16,6 +17,7 @@
       </error_list>
     </apache_configuration>
     <tomcat_configuration>
+      <name>tomcat_configuration</name>
       <error_list>
         <error>
           <code>500</code>

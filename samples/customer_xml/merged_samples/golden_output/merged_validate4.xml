@@ -2,6 +2,7 @@
 <validation_report>
   <errors>
     <tomcat_configuration>
+      <name>tomcat_configuration</name>
       <error_list>
         <error>
           <code>-1</code>

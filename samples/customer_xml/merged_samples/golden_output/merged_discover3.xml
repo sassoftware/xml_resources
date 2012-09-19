@@ -2,6 +2,7 @@
 <discovered_properties>
   <errors>
     <apache_configuration>
+      <name>apache_configuration</name>
       <error_list>
         <error>
           <code>500</code>
@@ -16,6 +17,7 @@
       </error_list>
     </apache_configuration>
     <tomcat_configuration>
+      <name>tomcat_configuration</name>
       <error_list>
         <error>
           <code>500</code>
@@ -25,6 +27,7 @@
       </error_list>
     </tomcat_configuration>
     <config_error-6582f3c6-8af6-4f4d-bac8-485df0ed6d8c>
+      <name>config_error-6582f3c6-8af6-4f4d-bac8-485df0ed6d8c</name>
       <error_list>
         <error>
           <code>2319</code>
