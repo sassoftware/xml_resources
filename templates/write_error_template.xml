@@ -1,0 +1,10 @@
+<read_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
+    <name>__name__</name>
+    <errors>
+        <error>
+            <code>__error_code__</code>
+            <details><![CDATA[__error_details__]]></details>
+            <summary>__error_summary__</summary>
+        </error>
+    </errors>
+</read_report>
