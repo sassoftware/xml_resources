@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<write_status>
+  <errors>
+    <apache_configuration>
+      <name>apache_configuration</name>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail><![CDATA[Apache failed to restart]]></detail>
+          <message>Failed setting apache port</message>
+        </error>
+        <error>
+          <code>1</code>
+          <detail><![CDATA[Traceback: A bunch of tb data]]></detail>
+          <message>Error when stuff broke, fix it</message>
+        </error>
+      </error_list>
+    </apache_configuration>
+    <tomcat_configuration>
+      <name>tomcat_configuration</name>
+      <error_list>
+        <error>
+          <code>500</code>
+          <detail><![CDATA[Tomcat not started]]></detail>
+          <message>General error: tomcat not running</message>
+        </error>
+      </error_list>
+    </tomcat_configuration>
+  </errors>
+  <status>fail</status>
+</write_status>

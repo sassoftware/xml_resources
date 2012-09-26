@@ -288,4 +288,59 @@
     
   </xsl:template>
   
+  <xsl:template match="/write_reports">
+    
+    <xsl:element name="write_status">
+    
+      <!-- Store whether or not there were errors -->
+      <xsl:variable name="has_errors" select="count(descendant::error) > 0"/>
+    
+      <!-- Process errors -->
+      <xsl:if test="$has_errors">
+        <xsl:element name="errors">
+      
+          <!-- Loop over each individual report -->
+          <xsl:for-each select="write_report">
+            <xsl:variable name="write_name" select="name"/>
+            
+            <xsl:if test="errors">
+              <xsl:element name="{$write_name}">
+                <xsl:element name="name">
+                  <xsl:value-of select="$write_name"/>
+                </xsl:element>
+                <xsl:element name="error_list">
+                  <xsl:for-each select="errors/error">
+                    <xsl:element name="error">
+                      <xsl:element name="code">
+                        <xsl:value-of select="code"/>
+                      </xsl:element>
+                      <xsl:element name="detail">
+                        <xsl:value-of select="details"/>
+                      </xsl:element>
+                      <xsl:element name="message">
+                        <xsl:value-of select="summary"/>
+                      </xsl:element>
+                    </xsl:element>
+                  </xsl:for-each>
+                </xsl:element>
+              </xsl:element>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:element>
+      </xsl:if>
+      
+      <!-- Add overall status flag -->
+      <xsl:choose>
+       <xsl:when test="$has_errors">
+         <xsl:element name="status">fail</xsl:element>
+       </xsl:when>
+       <xsl:otherwise>
+         <xsl:element name="status">pass</xsl:element>
+       </xsl:otherwise>
+     </xsl:choose>
+    
+    </xsl:element>
+    
+  </xsl:template>
+  
 </xsl:stylesheet>
