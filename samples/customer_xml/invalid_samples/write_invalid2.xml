@@ -1,0 +1,4 @@
+<write_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
+    <name>tomcat_configuration</name>
+    <success>True</success>
+</write_report>

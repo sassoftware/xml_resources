@@ -1,0 +1,15 @@
+<write_report version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rpath.com/permanent/rpath-configurator-2.0.xsd rpath-configurator-2.0.xsd">
+    <name>apache_configuration</name>
+    <errors>
+        <error>
+            <code>500</code>
+            <details><![CDATA[Apache failed to restart]]></details>
+            <summary>Failed setting apache port</summary>
+        </error>
+        <error>
+            <code>1</code>
+            <details><![CDATA[Traceback: A bunch of tb data]]></details>
+            <summary>Error when stuff broke, fix it</summary>
+        </error>
+    </errors>
+</write_report>

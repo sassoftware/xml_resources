@@ -5,6 +5,7 @@
   <xs:element name="validation_report" type="ConfigValidationReport"></xs:element>
   <xs:element name="discovery_report" type="ConfigDiscoveryReport"></xs:element>
   <xs:element name="read_report" type="ConfigReadReport"></xs:element>
+  <xs:element name="write_report" type="ConfigWriteReport"></xs:element>
 
   <!-- Validation report complex type -->
   <xs:complexType name="ConfigValidationReport">
@@ -37,6 +38,15 @@
       <xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
       <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
       <xs:element name="properties" type="ConfigProperties" maxOccurs="1" minOccurs="0"></xs:element>
+    </xs:all>    
+    <xs:attribute name="version" type="Version" use="required"></xs:attribute>
+  </xs:complexType>
+  
+  <!-- Write report complex type -->
+  <xs:complexType name="ConfigWriteReport">
+    <xs:all>
+      <xs:element name="name" type="xs:Name" maxOccurs="1" minOccurs="1"></xs:element>
+      <xs:element name="errors" type="ConfigErrors" maxOccurs="1" minOccurs="0"></xs:element>
     </xs:all>    
     <xs:attribute name="version" type="Version" use="required"></xs:attribute>
   </xs:complexType>
