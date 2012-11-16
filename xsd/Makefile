@@ -15,4 +15,4 @@
 SCHEMA_FILES = $(wildcard *.xsd)
 
 test:
-	xmllint -schema http://www.w3.org/2001/XMLSchema.xsd $(SCHEMA_FILES) > /dev/null
+	xmllint -schema XMLSchema.xsd $(SCHEMA_FILES) > /dev/null
